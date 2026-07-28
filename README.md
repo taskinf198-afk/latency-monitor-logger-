@@ -43,7 +43,7 @@ public:
         //        ).count();
     }
 
-    inline void stop(uint6_t start_time, const std::string& label) {
+    inline void stop(uint64_t start_time, const std::string& label) {
         uint64_t end_time = __rdtsc();
         uint64_t cycles = end_time - start_time;
         std::cout << "[Latency Log] " << label << " took " << cycles << " CPU cycles." << std::endl;
